@@ -31,8 +31,13 @@ body {
   text-align: center;
 }
 
+
 .text--regular {
 	font-weight: 400;
+}
+
+.text--medium {
+	font-weight: 500;
 }
 
 .text--bold {
@@ -47,6 +52,14 @@ body {
 	color: var(--dark-grayish-magenta);
 }
 
+.text--pink {
+	color: var(--soft-pink);
+}
+
+.text--white {
+	color: var(--white);
+}
+
 .flex--vertical-items-self-center {
   display: flex;
   align-self: center;
@@ -58,12 +71,45 @@ body {
 	align-items: center;
 }
 
+.flex--align-flex-start {
+	align-items: flex-start;
+}
+
 .flex--direction-column {
 	flex-direction: column;
+}
+
+.img--circle {
+	border-radius: 50%;
 }
 
 .review__card {
 	background-color: var(--light-grayish-magenta);
 	height: 72px;
 	border-radius: 4px;
+}
+
+.review-person-card {
+	background-color: var(--very-dark-magenta);
+	padding: 8px;
+	border-radius: 6px;
+	height: 256px;
+	display: grid;
+	grid-template-columns: 20% 80%;
+	grid-template-rows: 64px 192px;
+	grid-template-areas: "img info" "p p";
+}
+
+.review-person-card > img {
+	grid-area: img;
+	width: 100%;
+}
+
+.review-person-card > div {
+	grid-area: info;
+	margin-left: 12px;
+}
+
+.review-person-card > p {
+	grid-area: p;
 }
