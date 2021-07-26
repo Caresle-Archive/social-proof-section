@@ -24,7 +24,30 @@ body {
 	width: 90%;
 	margin: 0 auto;
 	grid-template-columns: 1fr;
-	grid-template-rows: 96px 192px repeat(3, 80px) repeat(3, 272px);
+	grid-template-rows: 96px 192px 240px 816px;
+	grid-template-areas: "title" "text-p" "star" "person";
+}
+
+#title {
+	grid-area: title;
+}
+
+#text {
+	grid-area: text-p;
+}
+
+#review-star-container {
+	display: grid;
+	grid-area: star;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 80px);
+}
+
+#review-person-container {
+	display: grid;
+	grid-area: person;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, 272);
 }
 
 .text--center {
@@ -95,7 +118,7 @@ body {
 	border-radius: 6px;
 	height: 256px;
 	display: grid;
-	grid-template-columns: 20% 80%;
+	grid-template-columns: 64px 1fr;
 	grid-template-rows: 64px 192px;
 	grid-template-areas: "img info" "p p";
 }
@@ -103,6 +126,7 @@ body {
 .review-person-card > img {
 	grid-area: img;
 	width: 100%;
+	height: 100%;
 }
 
 .review-person-card > div {
@@ -112,4 +136,10 @@ body {
 
 .review-person-card > p {
 	grid-area: p;
+}
+
+@media only screen and (min-width: 1000px) {
+	.grid-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
