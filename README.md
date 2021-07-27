@@ -33,8 +33,8 @@ Desktop
 
 ### Links
 
-- Solution URL: [Solution page]()
-- Live Site URL: [Github pages]()
+- Solution URL: [Solution page](https://www.frontendmentor.io/solutions/html-css-ejqsQC3WL)
+- Live Site URL: [Github pages](https://caresle.github.io/social-proof-section/)
 
 ## My process
 
