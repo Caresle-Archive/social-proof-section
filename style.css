@@ -24,8 +24,16 @@ body {
 	width: 90%;
 	margin: 0 auto;
 	grid-template-columns: 1fr;
-	grid-template-rows: 96px 192px 240px 816px;
-	grid-template-areas: "title" "text-p" "star" "person";
+	grid-template-rows: 288px 240px 816px;
+	grid-template-areas: "text-container" "star" "person";
+}
+
+#text-container {
+	display: grid;
+	grid-area: text-container;
+	grid-template-columns: 1fr;
+	grid-template-rows: 96px 192px;
+	grid-template-areas: "title" "text-p";
 }
 
 #title {
@@ -138,8 +146,50 @@ body {
 	grid-area: p;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 1200px) {
 	.grid-container {
+		max-width: 1440px;
+		margin: 2rem auto;
 		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: 288px 272px;
+		grid-template-areas: "text-container star" "person person"
+	}
+
+	#review-star-container {
+		justify-items: center;
+	}
+
+	#review-person-container {
+		grid-template-columns: repeat(3, 1fr);
+		justify-items: center;
+	}
+
+	#review-1, #review-2, #review-3 {
+		flex-direction: row;
+		width: 400px;
+	}
+
+	#review-1 > p, #review-2 > p, #review-3 > p {
+		margin-left: 1rem;
+	}
+
+	#review-2 {
+		margin-left: 6rem;
+	}
+
+	#review-3 {
+		margin-left: 12rem;
+	}
+
+	#card-2 {
+		margin-top: 8px;
+	}
+
+	#card-3 {
+		margin-top: 1rem;
+	}
+
+	.review-person-card {
+		width: 360px;
 	}
 }
