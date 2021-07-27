@@ -149,7 +149,7 @@ body {
 @media only screen and (min-width: 1200px) {
 	.grid-container {
 		max-width: 1440px;
-		margin: 2rem auto;
+		margin: 25vh auto;
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: 288px 272px;
 		grid-template-areas: "text-container star" "person person"
